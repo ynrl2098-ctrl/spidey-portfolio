@@ -3,7 +3,7 @@
   --spidey-blue: #0051BA;
   --spidey-dark: #08030A;
   --spidey-yellow: #FFD200;
-  --card-bg: rgba(15, 12, 20, 0.88);
+  --card-bg: rgba(15, 12, 20, 0.92);
 }
 
 * {
@@ -16,16 +16,19 @@ html {
   scroll-behavior: smooth;
 }
 
-/* Atmospheric Red & Purple Spider-Web Background */
+/* 100% Pure CSS Dark Spider-Web Canvas */
 body {
-  background-color: var(--spidey-dark);
+  background-color: #08030A;
   background-image: 
-    radial-gradient(circle at 85% 15%, rgba(230, 36, 41, 0.35), transparent 40%),
-    radial-gradient(circle at 20% 40%, rgba(120, 20, 60, 0.25), transparent 50%),
-    url("https://img.freepik.com/free-vector/spider-web-glowing-red-threads-dark-background_107791-16319.jpg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+    /* Top-Right Red Spider-Glow */
+    radial-gradient(circle at 85% 15%, rgba(230, 36, 41, 0.45) 0%, transparent 45%),
+    /* Bottom-Left Dark Purple Glow */
+    radial-gradient(circle at 15% 70%, rgba(90, 15, 50, 0.35) 0%, transparent 50%),
+    /* Pure SVG Spider-Web Overlay */
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='400' viewBox='0 0 400 400'%3E%3Cg stroke='%23E62429' stroke-width='0.8' fill='none' opacity='0.25'%3E%3Cpath d='M200 0 L200 400 M0 200 L400 200 M58.58 58.58 L341.42 341.42 M341.42 58.58 L58.58 341.42'/%3E%3Cpath d='M200 160 Q240 160 240 200 Q240 240 200 240 Q160 240 160 200 Q160 160 200 160'/%3E%3Cpath d='M200 120 Q280 120 280 200 Q280 280 200 280 Q120 280 120 200 Q120 120 200 120'/%3E%3Cpath d='M200 80 Q320 80 320 200 Q320 320 200 320 Q80 320 80 200 Q80 80 200 80'/%3E%3Cpath d='M200 40 Q360 40 360 200 Q360 360 200 360 Q40 360 40 200 Q40 40 200 40'/%3E%3C/g%3E%3C/svg%3E");
+  background-size: cover, cover, 350px 350px;
+  background-position: center, center, center;
+  background-repeat: no-repeat, no-repeat, repeat;
   background-attachment: fixed;
   color: #ffffff;
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
@@ -178,7 +181,7 @@ h1 {
   color: var(--spidey-red);
 }
 
-/* Glassmorphism Comic Card with Crimson Glow */
+/* Glassmorphism Comic Card with Red Glow */
 .comic-card {
   background: var(--card-bg);
   border: 2px solid rgba(230, 36, 41, 0.4);
