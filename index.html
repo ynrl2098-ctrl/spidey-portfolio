@@ -9,7 +9,7 @@
 </head>
 <body>
 
-  <!-- Custom Web Shooter Cursor -->
+  <!-- Glowing Spider-Man Cursor Dot -->
   <div class="web-cursor"></div>
 
   <!-- Interactive 3D Canvas Container -->
@@ -71,12 +71,12 @@
       <h2 class="section-title">FIELD MISSIONS <span>(TIMELINE)</span></h2>
       <div class="timeline">
         <div class="timeline-item comic-card">
-          <div class="comic-sound">DONE</div>
+          <div class="comic-sound">ACTIVE</div>
           <h3>MISSION #1 — GOSI</h3>
           <span class="company">General Organization for Social Insurance | 2022 – 2023</span>
         </div>
         <div class="timeline-item comic-card">
-          <div class="comic-sound">DONE</div>
+          <div class="comic-sound">ACTIVE</div>
           <h3>MISSION #2 — FERRING</h3>
           <span class="company">Ferring Pharmaceuticals | 2023 – 2024</span>
         </div>
@@ -180,11 +180,24 @@
   </main>
 
   <script>
+    // Smooth Lerp Cursor Animation
     const cursor = document.querySelector('.web-cursor');
+    let mouseX = 0, mouseY = 0;
+    let cursorX = 0, cursorY = 0;
+
     document.addEventListener('mousemove', (e) => {
-      cursor.style.left = e.clientX + 'px';
-      cursor.style.top = e.clientY + 'px';
+      mouseX = e.clientX;
+      mouseY = e.clientY;
     });
+
+    function animateCursor() {
+      cursorX += (mouseX - cursorX) * 0.18;
+      cursorY += (mouseY - cursorY) * 0.18;
+      cursor.style.left = cursorX + 'px';
+      cursor.style.top = cursorY + 'px';
+      requestAnimationFrame(animateCursor);
+    }
+    animateCursor();
   </script>
 </body>
 </html>
