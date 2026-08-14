@@ -9,6 +9,9 @@
 </head>
 <body>
 
+  <!-- Custom Web Shooter Cursor -->
+  <div class="web-cursor"></div>
+
   <!-- Interactive 3D Canvas Container -->
   <div class="canvas-container">
     <spline-viewer url="https://prod.spline.design/6WNa1MYR3L3571Bm/scene.splinecode"></spline-viewer>
@@ -28,7 +31,7 @@
 
     <!-- Hero Section -->
     <section id="about" class="hero web-section">
-      <span class="badge">🕸️ THWIP! OPEN FOR WORK</span>
+      <span class="badge spider-sense">🕸️ THWIP! OPEN FOR WORK</span>
       <h1>PAVAN KUMAR YERRAMSETTY</h1>
       <p class="subtitle">
         <strong>B.Tech | 4+ YOE Applications Database Administrator</strong><br/>
@@ -45,14 +48,17 @@
       <h2 class="section-title">SUIT ARSENAL <span>(SKILLS & TECH)</span></h2>
       <div class="skills-grid">
         <div class="skill-card comic-card">
+          <div class="comic-sound">BOOM!</div>
           <h3>Operating Systems</h3>
           <p>Linux, Windows Server</p>
         </div>
         <div class="skill-card comic-card">
+          <div class="comic-sound">THWIP!</div>
           <h3>Database & Middleware</h3>
           <p>Oracle E-Business Suite R12.2, Oracle WebLogic Server, OEM 13c & 24ai</p>
         </div>
         <div class="skill-card comic-card">
+          <div class="comic-sound">POW!</div>
           <h3>Core Competencies</h3>
           <p>Oracle Apps DBA, System Administration, ADOP Patching, Performance Tuning, User & Security Management</p>
         </div>
@@ -64,14 +70,17 @@
       <h2 class="section-title">FIELD MISSIONS <span>(TIMELINE)</span></h2>
       <div class="timeline">
         <div class="timeline-item comic-card">
+          <div class="comic-sound">ACTIVE</div>
           <h3>MISSION #1 — GOSI</h3>
           <span class="company">General Organization for Social Insurance | 2022 – 2023</span>
         </div>
         <div class="timeline-item comic-card">
+          <div class="comic-sound">ACTIVE</div>
           <h3>MISSION #2 — FERRING</h3>
           <span class="company">Ferring Pharmaceuticals | 2023 – 2024</span>
         </div>
         <div class="timeline-item comic-card">
+          <div class="comic-sound">ON-GOING</div>
           <h3>MISSION #3 — MOTOROLA SOLUTIONS</h3>
           <span class="company">Motorola Solutions (MSI) | ON-GOING MISSION</span>
         </div>
@@ -84,6 +93,7 @@
       <div class="projects-grid">
         
         <div class="project-card comic-card">
+          <div class="comic-sound">VERIFIED</div>
           <div class="project-tag">Insurance</div>
           <h3>General Organization for Social Insurance</h3>
           <ul class="task-list">
@@ -97,6 +107,7 @@
         </div>
 
         <div class="project-card comic-card">
+          <div class="comic-sound">VERIFIED</div>
           <div class="project-tag">Pharma</div>
           <h3>Ferring Pharmaceuticals</h3>
           <ul class="task-list">
@@ -111,6 +122,7 @@
         </div>
 
         <div class="project-card comic-card">
+          <div class="comic-sound">MISSION CRITICAL</div>
           <div class="project-tag">Telecom / Safety</div>
           <h3>Motorola Solutions</h3>
           <ul class="task-list">
@@ -141,5 +153,12 @@
     </section>
   </main>
 
+  <script>
+    const cursor = document.querySelector('.web-cursor');
+    document.addEventListener('mousemove', (e) => {
+      cursor.style.left = e.clientX + 'px';
+      cursor.style.top = e.clientY + 'px';
+    });
+  </script>
 </body>
 </html>
