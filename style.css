@@ -10,11 +10,13 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  cursor: none; /* Hides standard pointer */
+  cursor: none;
 }
 
+/* Smooth Scrolling Mechanism */
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 5rem;
 }
 
 /* Solid Glowing Crimson Spider-Man Cursor Dot */
@@ -29,7 +31,6 @@ html {
   z-index: 9999;
   transform: translate(-50%, -50%);
   box-shadow: 0 0 10px var(--spidey-red), 0 0 20px var(--spidey-red);
-  transition: transform 0.08s ease;
 }
 
 /* Spider-Web Mesh Vector Background */
@@ -200,6 +201,7 @@ h1 {
   color: var(--spidey-red);
 }
 
+/* Glassmorphism Card Styling */
 .comic-card {
   position: relative;
   background: var(--card-bg);
@@ -313,6 +315,7 @@ h1 {
   font-weight: 600;
 }
 
+/* Smooth Slide-In Animations for Sections */
 @keyframes thwip-in {
   from {
     opacity: 0;
