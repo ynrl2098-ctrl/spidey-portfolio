@@ -10,27 +10,29 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  cursor: none; /* Hides standard pointer */
 }
 
 html {
   scroll-behavior: smooth;
 }
 
-/* Custom Web Shooter Target Cursor */
+/* Solid Glowing Crimson Spider-Man Cursor Dot */
 .web-cursor {
-  width: 22px;
-  height: 22px;
-  border: 2px solid var(--spidey-yellow);
+  width: 12px;
+  height: 12px;
+  background-color: var(--spidey-red);
+  border: 2px solid #ffffff;
   border-radius: 50%;
   position: fixed;
   pointer-events: none;
   z-index: 9999;
   transform: translate(-50%, -50%);
-  box-shadow: 0 0 12px var(--spidey-yellow), 0 0 6px var(--spidey-red);
+  box-shadow: 0 0 10px var(--spidey-red), 0 0 20px var(--spidey-red);
   transition: transform 0.08s ease;
 }
 
-/* Spider-Web Mesh Vector Background with Glowing Radial Hubs */
+/* Spider-Web Mesh Vector Background */
 body {
   background-color: #08030A;
   background-image: 
@@ -110,7 +112,6 @@ nav a:hover {
   max-width: 700px;
 }
 
-/* Pulsing Spider-Sense Warning Tag */
 .spider-sense {
   background: rgba(255, 210, 0, 0.15);
   border: 1px solid var(--spidey-yellow);
@@ -199,7 +200,6 @@ h1 {
   color: var(--spidey-red);
 }
 
-/* Comic Card Styling with Interactive Floating Badge */
 .comic-card {
   position: relative;
   background: var(--card-bg);
